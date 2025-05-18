@@ -821,7 +821,7 @@
     marker-fill: @amenity-water;
   }
 
-  [feature = 'shop_supermarket'][zoom >= 16] {
+  [feature = 'shop_supermarket'][zoom >= 5] {
     marker-placement: interior;
     marker-clip: false;
 		marker-fill: @shop-icon;
@@ -876,9 +876,10 @@
   [feature = 'amenity_ice_cream'][zoom >= 17],
   [feature = 'amenity_pub'][zoom >= 17],
   [feature = 'amenity_restaurant'][zoom >= 17],
-  [feature = 'shop_bakery'][zoom >= 17],
-  [feature = 'shop_convenience'][zoom >= 17],
-  [feature = 'shop_convenience;gas'][zoom >= 17],
+  [feature = 'shop_bakery'][zoom >= 5],
+  [feature = 'shop_convenience'][zoom >= 5],
+  [feature = 'shop_convenience;gas'][zoom >= 5],
+  [feature = 'shop_kiosk'][zoom >= 5],
   [feature = 'shop_greengrocer'][zoom >= 17],
   [feature = 'shop_pastry'][zoom >= 16],
   [feature = 'shop_beverages'][zoom >= 17]
@@ -899,6 +900,7 @@
 		[feature = 'shop_bakery'],
 		[feature = 'shop_convenience'],
 		[feature = 'shop_convenience;gas'],
+		[feature = 'shop_kiosk'],
 		[feature = 'shop_greengrocer'],
 		[feature = 'shop_pastry'],
 		[feature = 'shop_beverages'] {
@@ -930,8 +932,8 @@
     [feature = 'shop_bakery'][zoom >= 16] {
       marker-file: url('symbols/openstreetmap-carto/shop/bakery.svg');
     }
-    [feature = 'shop_convenience'][zoom >= 16],
-    [feature = 'shop_convenience;gas'][zoom >= 16] {
+    [feature = 'shop_convenience'][zoom >= 5],
+    [feature = 'shop_convenience;gas'][zoom >= 5] {
       marker-file: url('symbols/openstreetmap-carto/shop/convenience.svg');
 
       //Pump sub icon
@@ -1284,7 +1286,9 @@
     }
   }
 
-  [feature = 'shop_supermarket'][zoom >= 18] {
+  [feature = 'shop_convenience'],
+  [feature = 'shop_supermarket'] {
+  [zoom >= 5] {
     text-name: "[name]";
     text-size: @standard-font-size;
     text-wrap-width: @standard-wrap-width;
@@ -1295,7 +1299,8 @@
     text-halo-radius: @standard-halo-radius;
     text-halo-fill: rgba(255, 255, 255, 0.6);
     text-placement: interior;
-  }
+  } #zoom
+  } # shop
 
   [feature = 'leisure_sports_centre'][zoom >= 16] {
     text-name: "[name]";
