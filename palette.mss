@@ -35,11 +35,15 @@
 @meadow:            #e2eecb;
 @park:              #c2debd;
 @cemetery:          #D6DED2;
-@wooded:            #95bd84;
+@wooded:            #95bd84 * 1.1;
+// @wooded:            #b2cfa5;
+// @wooded:            @wooded * 1.1;
+// @wooded: lighten(@wooded, 10%);
 @heath:             #b2c068;
 @scrub:             #c8d7ab;
 @farmland:          #fbf0e3;
 @water:             #8ecbeb;
+@stream:            #44f;
 @glacier:           #ddecec;
 @religious:         #ded4b2;
 @military:          #f55;

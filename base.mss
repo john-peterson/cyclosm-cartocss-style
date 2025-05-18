@@ -306,7 +306,7 @@ Map { background-color: @water; }
 }
 
 #waterway_med[zoom>=13][zoom<=14] {
-  line-color: @water;
+  line-color: @stream;
   [type='river'],
   [type='canal'] {
     line-cap: round;
@@ -315,8 +315,11 @@ Map { background-color: @water; }
     [zoom=14]{ line-width: 1.5; }
   }
   [type='stream'] {
-    [zoom=13]{ line-width: 0.2; }
-    [zoom=14]{ line-width: 0.4; }
+    [zoom=10]{ line-width: 0.5; }
+    [zoom=11]{ line-width: 0.5; }
+    [zoom=12]{ line-width: 0.5; }
+    [zoom=13]{ line-width: 0.6; }
+    [zoom=14]{ line-width: 0.6; }
   }
 }
 

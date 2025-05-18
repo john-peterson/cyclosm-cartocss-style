@@ -91,8 +91,8 @@
 @rdz11_living_street: 0;
 @rdz11_service: 0;
 @rdz11_pedestrian: 0;
-@rdz11_track: 0.15;
-@rdz11_path: 0.15;
+@rdz11_track: 0.5;
+@rdz11_path: 0.5;
 @rdz11_cycle: 0.4;
 @rdz11_railway: 0.5;
 // Border width (one side of the road only)
@@ -3303,13 +3303,14 @@
     }
   }
 
-  [type='track'][zoom >= 11] {
-    [surface_type='unknown'][zoom >= 13],
-    [surface_type='cyclocross'][zoom >= 12],
-    [surface_type='mtb'][zoom >= 12] {
+  [type='track'][zoom >= 5] {
+    [surface_type='unknown'][zoom >= 5],
+    [surface_type='cyclocross'][zoom >= 5],
+    [surface_type='mtb'][zoom >= 5] {
       background/line-join: round;
       background/line-opacity: 0.4;
-      background/line-color: #FFFFFF;
+      // background/line-color: #FFFFFF;
+      background/line-color: #000;
 
       background/line-width: @rdz12_track;
       [zoom>=13] { background/line-width: @rdz13_track; }
@@ -3345,6 +3346,7 @@
       #tunnel { line-color: lighten(@standard-nobicycle, 5%); }
     }
 
+// why is this not applied < 11
     line-width: @rdz11_track;
     [zoom>=12] { line-width: @rdz12_track; }
     [zoom>=13] { line-width: @rdz13_track; }
@@ -3410,7 +3412,8 @@
     [surface_type='mtb'] {
       background/line-join: round;
       background/line-opacity: 0.4;
-      background/line-color: #FFFFFF;
+      // background/line-color: #FFFFFF;
+      background/line-color: #000;
 
       background/line-width: @rdz13_footway;
       [zoom>=14] { background/line-width: @rdz14_footway; }
@@ -3558,14 +3561,15 @@
     }
   }
 
-  [type='path'][zoom >= 11]
+  [type='path'][zoom >= 5]
   {
-    [surface_type='unknown'][zoom >= 13],
-    [surface_type='cyclocross'][zoom >= 12],
-    [surface_type='mtb'][zoom >= 12] {
+    [surface_type='unknown'][zoom >= 5],
+    [surface_type='cyclocross'][zoom >= 5],
+    [surface_type='mtb'][zoom >= 5] {
       background/line-join: round;
       background/line-opacity: 0.4;
-      background/line-color: #FFFFFF;
+      // background/line-color: #FFFFFF;
+      background/line-color: #000;
 
       background/line-width: @rdz12_path;
       [can_bicycle='designated'] {
@@ -3629,6 +3633,7 @@
       }
     }
 
+// all paths 
     line-cap: round;
     line-join: round;
     line-color: @path-fill;
@@ -3680,6 +3685,7 @@
       #tunnel { line-color: lighten(@standard-nobicycle, 5%); }
     }
 
+// this should be visible from >= 5
     line-width: @rdz11_path;
     [zoom>=12] { line-width: @rdz12_path; }
     [zoom>=13] { line-width: @rdz13_path; }
