@@ -39,7 +39,8 @@
 @secondary-case: #b1bb5d;
 @secondary-fill: #f6f8d2;
 @standard-case: #888;
-@standard-fill: #f6f6f6;
+# @standard-fill: #f6f6f6;
+@standard-fill: #000;
 @standard-nobicycle: #d4d4d4;
 @tertiary-case: #777;
 @pedestrian-case: #bbb;
@@ -48,7 +49,8 @@
 @speed32-fill: #aff1f1;
 @speed20-fill: #bbffba;
 @speedWalk-fill: #ddffba;
-@nomotor-fill: #62ff96;
+# @nomotor-fill: #62ff96;
+@nomotor-fill: #000;
 @track-fill: #114021;
 @track-light1: lighten(@track-fill, 30%);
 @track-light2: lighten(@track-fill, 50);
